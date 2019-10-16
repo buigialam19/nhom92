@@ -1,2 +1,0 @@
-user data: admin
-pass: 123456789
