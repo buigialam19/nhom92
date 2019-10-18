@@ -1,40 +1,43 @@
-# Mimstris
+# mk.js
 
-An arcade puzzle game created in JS using [React](https://facebook.github.io/react/) / [Redux](http://redux.js.org/).
+This is simple fighting game created with HTML5 canvas and JavaScript. It has three game modes:
+* `Basic` - with one active and on inactive player.
+* `Multiplayer` - with two active players on one computer.
+* `Network` - with two active players, playing over the network.
 
-**This game is open-source, free, and just for funsies!**
+Each mode can be easily chosen by picking a `gameType` when specifying the game options.
 
-## 👉 [Play Now!](https://mimstris.surge.sh)  🎮 📺
+The `multiplayer` mode can be tested [here](http://mk.mgechev.com/).
 
-[![Screen Shot](screenshot.gif)](htts://mimstris.surge.sh)
+The `Network` mode with `Web RTC Data Channel Demo` [here](http://ptpgamedemo.appspot.com).
 
-## Motivation
-After watching [Meth Meth Method's video](https://www.youtube.com/watch?v=H2aW5V46khA) I was inspired to create a similar game for the following reasons:
+For the network game you need to install the server:
 
-  1. To try my hand at making a game using functional programming methodologies.
-  1. To try out some JS tools that I hadn't used before
-  1. I thought it would be fun to make up crazy custom shapes and/or game modes.
+    git clone git@github.com:mgechev/mk.js
+    cd mk.js/server
+    npm install
+    node server.js
 
-Some of the tools I used:
+The server will be started on port `55555`. Open your browser and go to `http://localhost:55555`. Both players must enter the same game name to play together.
 
-  - [redux](http://redux.js.org/) for state management
-  - [reselect](https://github.com/reactjs/reselect) for memoized selectors
-  - [react](https://facebook.github.io/react/) for component rendering
-  - [Ducks](https://github.com/erikras/ducks-modular-redux) for module organization
-  - [AVA](https://github.com/avajs/ava) for unit tests and [nyc](https://github.com/istanbuljs/nyc) for code coverage
-  - [lodash](https://lodash.com/) for numerous utility functions
-  - [random-seed](https://github.com/skratchdot/random-seed) to create a deterministic game mode (where every game is the same order of pieces)
-  - [pressed](https://github.com/mimshwright/pressed.js) for detecting key presses in update loop (I created this library for this project)
-  - babel, webpack, standard (code style)
-  - ES6
+# Configuration
 
-## Controls
+In this section I'll describe in short how you can configure mk.js.
 
-| Key   | Action |
-| ----- | ------ |
-| Left, A  | Left   |
-| Right, D | Right  |
-| Down, S  | Down   |
-| Shift, Up    | Rotate Right |
-| Z, /    | Rotate Left |
-| Enter    | Pause / Restart Game |
+* `arena` - object which contains different properties for the arena.
+    * `arena` - type of the arena. The different arenas are listed at: `mk.arenas.types`
+    * `container` - parent container of the canvas which is the actual arena.
+* `fighters` - array of two objects which are the two players.
+    * `name` - player's name. It's case insensitive string without any special characters and white space.
+* ` callbacks` - callbacks which will be invoked when some events happens.
+    * `attack`- callback which will be invoked on successful attack
+    * `game-end` - callback which will be invoked on game end
+    * `player-connected` - callback which will be invoked in `network` game when the second player is connected.
+* `game-type` - specifies the game controller which will be used. Possible values are: `network`, `basic` and `multiplayer`.
+* `gameName` - used in `network` game.
+* `isHost` - used in `network` game, tells the game controller whether the current user have created the game.
+* `reset` - a method which reset the game. It clean some references and call the reset methods of lower level components. Calling it will lead to removal of the game canvas.
+
+# License
+
+This software is distributed under the terms of the MIT license.
