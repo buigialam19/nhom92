@@ -1,0 +1,166 @@
+#videoapi-wrap-player{
+    background: #32373C;
+    display: block;
+    background-image: url(../images/loading.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#videoapi-list-server{
+	/* border: 3px solid #304156; */
+	margin-bottom: 10px;
+	border-radius: 0 0 15px 15px;
+}
+#videoapi-list-server .videoapi-server{
+    border: 1px solid #324056;
+    padding: 10px;
+    margin: 20px 9px;
+    color: #a5bbdc;
+    background: #;
+}
+#videoapi-list-server .videoapi-server-name {
+    background: url(../images/server.png) no-repeat  scroll 5px 6px;
+    padding: 1px 0 0 25px;
+    font-size: 17px;
+    width: 120px;
+    color: #5cafd0;
+    font-weight: bold;
+    border: 1px solid #324056;
+    font-family: UTM_Cafeta;
+    background-color: #161d25;
+    text-transform: uppercase;
+    margin-top: -25px;
+}
+#videoapi-list-server ul.videoapi-list-episode {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-left: 5px;
+    text-align: center;
+}
+#videoapi-list-server li.videoapi-episode {
+    float: left;
+    margin: 0 1px 1px 1px;
+    list-style: none;
+}
+
+#videoapi-list-server li.videoapi-episode span{
+    cursor: pointer;
+}
+
+#videoapi-list-server .videoapi-btn {
+    margin: 1px 1px 1px 0;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    border-width: 2px;
+    border-style: solid;
+    outline: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    color: #5cafd0;
+    border-color: #103e4b;
+    background-color: #526480;
+    text-decoration: none;
+    min-width: 20px;
+}
+#videoapi-list-server .active {
+	   color: #fff;
+	   border-color: #103e4b;
+	   background-color: #0090e0;
+}
+#videoapi-list-server .videoapi-btn:hover {
+	color: #fff;
+	border-color: #1b5971;
+	background-color: #5cafd0;
+}
+#videoapi-list-server .clear{
+    clear: both;
+}
+#videoapi-feature{
+    padding: 10px;
+    color: #fff;
+    background: #103e4b;
+    font-size: 17px;
+}
+#videoapi-feature .videoapi-switch {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 18px;
+}
+
+#videoapi-feature .videoapi-switch input {display:none;}
+
+#videoapi-feature .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#videoapi-feature .slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#videoapi-feature input:checked + .slider {
+  background-color: #27AE60;
+}
+
+#videoapi-feature input:focus + .slider {
+  box-shadow: 0 0 1px #27AE60;
+}
+
+#videoapi-feature input:checked + .slider:before {
+  -webkit-transform: translateX(14px);
+  -ms-transform: translateX(14px);
+  transform: translateX(14px);
+}
+
+/* Rounded sliders */
+#videoapi-feature .slider.round {
+  border-radius: 20px;
+}
+
+#videoapi-feature .slider.round:before {
+  border-radius: 50%;
+}
+#videoapi-feature .auto-next{
+    font-size: 15px;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: bold;
+}
+#videoapi-feature .auto-next>.left{
+    float: left;
+    margin-top: 2px;
+}
+#videoapi-feature .auto-next>.right{
+    margin-left: 3px;
+    margin-top: 5px;
+}
+#videoapi-player .player-error{
+  background: #32373C;
+  text-align:center;
+}
+#videoapi-player .player-error p{
+  color:red;
+}

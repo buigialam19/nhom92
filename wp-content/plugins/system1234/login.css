@@ -1,0 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto&subset=latin,vietnamese,greek-ext,greek,latin-ext,cyrillic-ext,cyrillic);
+#login h1 a {
+    background-image: url(logo.png)!important;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 247px 100px;
+    display: block;
+    height: 79px;
+    outline: 0 none;
+    overflow: hidden;
+    padding-bottom: 15px;
+    margin: 0;
+    text-indent: -9999px;
+    width: 326px;
+}
+.login {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px!important;
+}
+.login label, .login #backtoblog, .login #nav {
+	 font-size: 13px!important;
+     font-weight: bold!important;
+}
+#login {
+    margin: auto;
+    padding: 4% 0 0;
+    width: 320px;
+}
+.login form {
+    background: none;
+    box-shadow: none;
+    padding: 6px 24px 46px;
+}
+.login form .input {
+    border: none;
+    padding: 10px;
+    font-size: 13px!important;
+    font-weight: bold!important;
+    background-color: #FFFFFF;
+    border-left: 4px solid #009ACF;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+.wp-core-ui .button-primary {
+    background: #009ACF url(../images/syncfusion-icons-white.png) no-repeat 230px center;
+    border-color: #1C95BF;
+    box-shadow: none;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.wp-core-ui .button-primary:hover, .wp-core-ui .button-primary.focus, .wp-core-ui .button-primary:focus {
+    background: #1A90B9 url(../images/syncfusion-icons-white.png) no-repeat 230px center;
+    border-color: #0780AB;
+    box-shadow: none;
+}
+.wp-core-ui .button.button-large, .wp-core-ui .button-group.button-large .button {
+    height: 38px;
+    line-height: 28px;
+    padding: 8px 109px 5px;
+    margin-top: 10px;
+}
